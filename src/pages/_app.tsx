@@ -1,8 +1,15 @@
 
 import type { AppProps } from 'next/app'
-import 'bulma/css/bulma.min.css';
+import Header from 'components/Header'
+import './../styles/index.scss'
+
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Header />
+      <Component {...pageProps} />
+    </>
+  )
 }
 
 export default MyApp
